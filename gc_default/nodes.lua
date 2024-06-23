@@ -18,3 +18,29 @@ minetest.register_node("gc_default:cobblestone", {
         stone = 1
     }
 })
+
+-- Dirt things
+
+minetest.register_node("gc_default:dirt", {
+    description = "Dirt",
+    tiles = {"gc_dirt.png"},
+    is_ground_content = true,
+    groups = {
+        crumbly = 3,
+        soil = 1
+    }
+})
+
+minetest.register_node("gc_default:grass_block", {
+    description = "Grass block",
+    tiles = {
+        "gc_grass_block_top.png",
+        "gc_dirt.png",
+        "gc_grass_block_side.png",
+        "gc_grass_block_side.png"
+    },
+    groups = {
+        crumbly = 3,
+        soil = 1
+    }
+})
