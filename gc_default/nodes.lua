@@ -133,3 +133,96 @@ minetest.register_node("gc_default:water_flowing", {
 	groups = {water = 3, liquid = 3, not_in_creative_inventory = 1,
 		cools_lava = 1},
 })
+
+-- Lava things
+
+minetest.register_node("gc_default:lava_source", {
+	description = ("Lava Source"),
+	drawtype = "liquid",
+	tiles = {
+		{
+			name = "gc_lava_source_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 3.0,
+			},
+		},
+		{
+			name = "gc_lava_source_animated.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 3.0,
+			},
+		},
+	},
+	paramtype = "light",
+	light_source = 10,
+	walkable = false,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "source",
+	liquid_alternative_flowing = "gc_default:lava_flowing",
+	liquid_alternative_source = "gc_default:lava_source",
+	liquid_viscosity = 7,
+	liquid_renewable = false,
+	damage_per_second = 4 * 2,
+	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
+	groups = {lava = 3, liquid = 2, igniter = 1},
+})
+
+minetest.register_node("gc_default:lava_flowing", {
+	description = ("Flowing Lava"),
+	drawtype = "flowingliquid",
+	tiles = {"gc_lava.png"},
+	special_tiles = {
+		{
+			name = "gc_lava_flowing_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 3.3,
+			},
+		},
+		{
+			name = "gc_lava_flowing_animated.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 3.3,
+			},
+		},
+	},
+	paramtype = "light",
+	paramtype2 = "flowingliquid",
+	light_source = 10,
+	walkable = false,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "flowing",
+	liquid_alternative_flowing = "gc_default:lava_flowing",
+	liquid_alternative_source = "gc_default:lava_source",
+	liquid_viscosity = 10,
+	liquid_renewable = false,
+	damage_per_second = 4 * 2,
+	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
+	groups = {lava = 3, liquid = 2, igniter = 1,
+		not_in_creative_inventory = 1},
+})
