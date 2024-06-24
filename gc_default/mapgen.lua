@@ -1,5 +1,7 @@
 
 minetest.register_alias("mapgen_stone", "gc_default:stone")
+minetest.register_alias("mapgen_water_source", "gc_default:water_source")
+minetest.register_alias("mapgen_river_water_source", "gc_default:water_source")
 
 minetest.register_biome({
     name = "grasslands1",
