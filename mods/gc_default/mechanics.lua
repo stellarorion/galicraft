@@ -58,6 +58,13 @@ minetest.register_abm({
             {x = pos.x, y = pos.y, z = pos.z - 1},
         }
 
+        -- Check if the node above the current dirt block is air
+        local above_pos = {x = pos.x, y = pos.y + 1, z = pos.z}
+        local above_node = minetest.get_node(above_pos)
+        if above_node.name ~= "air" then
+            return
+        end
+
         for _, neighbor_pos in ipairs(directions) do
             local neighbor_node = minetest.get_node(neighbor_pos)
             if neighbor_node.name == "gc_default:grass_block" then
