@@ -47,9 +47,23 @@ minetest.register_abm({
 minetest.register_abm({
     nodenames = {"gc_default:dirt"},
     neighbors = {"gc_default:grass_block"},
-    interval = 120,
-    chance = 2,
+    interval = 5,
+    chance = 1,
     action = function(pos, node, active_object_count, active_object_count_wider)
-        minetest.set_node(pos, {name = "gc_default:grass_block"})
+        -- Define horizontal neighbor directions
+        local directions = {
+            {x = pos.x + 1, y = pos.y, z = pos.z},
+            {x = pos.x - 1, y = pos.y, z = pos.z},
+            {x = pos.x, y = pos.y, z = pos.z + 1},
+            {x = pos.x, y = pos.y, z = pos.z - 1},
+        }
+
+        for _, neighbor_pos in ipairs(directions) do
+            local neighbor_node = minetest.get_node(neighbor_pos)
+            if neighbor_node.name == "gc_default:grass_block" then
+                minetest.set_node(pos, {name = "gc_default:grass_block"})
+                break
+            end
+        end
     end
 })
