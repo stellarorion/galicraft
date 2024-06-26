@@ -18,6 +18,7 @@ minetest.register_abm({
     interval = 5,
     chance = 1,
     action = function(pos, node, active_object_count, active_object_count_wider)
+        -- Define horizontal neighbor directions
         local directions = {
             {x = 0, y = 1, z = 0},  -- above
             {x = 0, y = -1, z = 0}, -- below
