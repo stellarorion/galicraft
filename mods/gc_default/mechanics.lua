@@ -48,8 +48,8 @@ minetest.register_abm({
 minetest.register_abm({
     nodenames = {"gc_default:dirt"},
     neighbors = {"gc_default:grass_block"},
-    interval = 5,
-    chance = 1,
+    interval = 120,
+    chance = 16,
     action = function(pos, node, active_object_count, active_object_count_wider)
         -- Define horizontal neighbor directions
         local directions = {
