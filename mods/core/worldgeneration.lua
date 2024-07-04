@@ -1,5 +1,8 @@
 -- Define bare minimum blocks for the world generation
 minetest.register_alias("mapgen_stone", "core:stone")
+minetest.register_alias("mapgen_cobble", "core:cobblestone")
+minetest.register_alias("mapgen_dirt", "core:dirt")
+minetest.register_alias("mapgen_dirt_with_grass", "core:grass_dirt")
 minetest.register_alias("mapgen_water_source", "core:water_source")
 minetest.register_alias("mapgen_lava_source", "core:lava_source")
 
