@@ -227,3 +227,6 @@ minetest.register_node("core:lava_flowing", {
 	damage_per_second = 4 * 2,
 	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
 })
+
+-- Compressed nodes
+
