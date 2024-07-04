@@ -3,7 +3,7 @@ minetest.register_node("core:stone", {
     tiles = {"core_stone.png"},
     is_ground_content = true,
     groups = {cracky = 3},
-    drop = "core:stone"
+    drop = "core:cobblestone"
 })
 
 minetest.register_node("core:cobblestone", {
