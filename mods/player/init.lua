@@ -10,8 +10,8 @@ local function set_speed(player)
 end
 
 minetest.register_tool(":", {
-    description = "My Tool",
-    inventory_image = "wieldhand.png",
+    description = "Hand",
+    inventory_image = "core_wieldhand.png",
     tool_capabilities = {
         full_punch_interval = 1.5,
         max_drop_level = 1,
