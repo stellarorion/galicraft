@@ -33,7 +33,7 @@ minetest.register_node("core:grass_dirt", {
     },
     is_ground_content = false,
     groups = {crumbly = 3},
-    drop = "core:grass_dirt"
+    drop = "core:dirt"
 })
 
 minetest.register_node("core:candy_dirt", {
