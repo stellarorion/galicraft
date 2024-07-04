@@ -6,6 +6,13 @@ minetest.register_node("core:stone", {
     drop = "core:stone"
 })
 
+minetest.register_node("core:cobblestone", {
+	description = "Cobblestone",
+	tiles = {"core_cobblestone.png"},
+	groups = {cracky = 3},
+	drop = "core:cobblestone"
+})
+
 minetest.register_node("core:dirt", {
     description = "Dirt",
     tiles = {"core_dirt.png"},
