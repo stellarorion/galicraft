@@ -6,6 +6,7 @@ minetest.register_alias("mapgen_dirt_with_grass", "core:grass_dirt")
 minetest.register_alias("mapgen_water_source", "core:water_source")
 minetest.register_alias("mapgen_lava_source", "core:lava_source")
 
+
 minetest.register_biome({
     name = "candylands",
     node_top = "core:grass_dirt",

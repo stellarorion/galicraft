@@ -18,9 +18,14 @@ minetest.register_tool(":", {
         groupcaps = {
             crumbly = {
                 maxlevel = 2,
-                uses = 20,
-                times = { [1]=1.60, [2]=1.20, [3]=0.80 }
+                uses = 0,
+                times = { [1]=1.60, [2]=1.20, [3]=1.2 }
             },
+            cracky = {
+                maxlevel = 3,
+                uses = 0,
+                times = {[1] = 5, [2] = 10, [3] = 20}
+            }
         },
         damage_groups = {fleshy=2},
     },
