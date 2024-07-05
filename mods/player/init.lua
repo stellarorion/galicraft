@@ -13,7 +13,7 @@ minetest.register_tool(":", {
     description = "Hand",
     inventory_image = "core_wieldhand.png",
     tool_capabilities = {
-        full_punch_interval = 1.5,
+        full_punch_interval = 1,
         max_drop_level = 1,
         groupcaps = {
             crumbly = {
