@@ -5,7 +5,7 @@ local liquids = {
 
 minetest.register_craftitem("bucket:empty_bucket", {
     description = "Empty Bucket",
-    inventory_image = "core_stone.png",
+    inventory_image = "bucket_empty_bucket.png",
     liquids_pointable = true,
     on_place = function(itemstack, placer, pointed_thing)
         local pos = pointed_thing.under
@@ -26,8 +26,8 @@ end
 
 minetest.register_craftitem("bucket:water_bucket", {
     description = "Water bucket",
-    inventory_image = "core_water.png",
-    liquids_pointable = true,
+    inventory_image = "bucket_water_bucket.png",
+    liquids_pointable = false,
     on_place = function (itemstack, placer, pointed_thing)
         local pos = pointed_thing.above
 
@@ -42,7 +42,7 @@ minetest.register_craftitem("bucket:water_bucket", {
 
 minetest.register_craftitem("bucket:lava_bucket", {
     description = "Lava bucket",
-    inventory_image = "core_lava.png",
+    inventory_image = "bucket_lava_bucket.png",
     liquids_pointable = false,
     on_place = function (itemstack, placer, pointed_thing)
         local pos = pointed_thing.above
