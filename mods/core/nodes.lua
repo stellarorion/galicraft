@@ -82,7 +82,7 @@ minetest.register_node("core:water_source", {
 	use_texture_alpha = "blend",
 	paramtype = "light",
 	walkable = false,
-	pointable = false,
+	pointable = false, -- This is necesarry for the buckets to work properly
 	diggable = false,
 	buildable_to = true,
 	is_ground_content = false,
@@ -168,7 +168,7 @@ minetest.register_node("core:lava_source", {
 	paramtype = "light",
 	light_source = core.LIGHT_MAX - 1,
 	walkable = false,
-	pointable = false,
+	pointable = false, -- This is necesarry for the buckets to work properly
 	diggable = false,
 	buildable_to = true,
 	is_ground_content = false,
@@ -230,3 +230,11 @@ minetest.register_node("core:lava_flowing", {
 
 -- Compressed nodes
 
+-- Gravity nodes (sand, gravel)
+
+minetest.register_node("core:sand",{
+	description = "Sand",
+	tiles = {"core_sand.png"},
+	groups = {crumbly = 2, falling_node = 1},
+	drop = "core:sand"
+})
